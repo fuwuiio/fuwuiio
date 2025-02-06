@@ -148,13 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function disableCurrentPageLink() {
-    const currentPage = window.location.pathname.split('/').pop(); // Get only the file name, not the entire path
+    const currentPage = window.location.pathname.split('/').pop();
+    console.log("Current Page: ", currentPage);
     const links = document.querySelectorAll('#popupMap a');
     links.forEach(link => {
-        const linkPage = link.href.split('/').pop(); // Get the file name from the link
+        const linkPage = new URL(link.href).pathname.split('/').pop(); // Correctly extract the filename from href
+        console.log("Link Href: ", link.href); // Check if it's the full URL
         if (linkPage === currentPage) {
             link.style.pointerEvents = 'none';
             link.style.color = 'gray';
         }
     });
 }
+
