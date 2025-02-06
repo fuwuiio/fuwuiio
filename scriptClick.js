@@ -147,12 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
     hideButtonsFromStorage();  // Hide buttons that were previously clicked
 });
 
-// Disable current page link logic
 function disableCurrentPageLink() {
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname.split('/').pop(); // Get only the file name, not the entire path
     const links = document.querySelectorAll('#popupMap a');
     links.forEach(link => {
-        if (link.href.includes(currentPage)) {
+        const linkPage = link.href.split('/').pop(); // Get the file name from the link
+        if (linkPage === currentPage) {
             link.style.pointerEvents = 'none';
             link.style.color = 'gray';
         }
