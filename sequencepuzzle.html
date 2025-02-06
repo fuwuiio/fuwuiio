@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Bamboo Forest</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <div class="splash-screen" id="splash-screen">
+        <div class="splash-content">
+          <h1>Bamboo Forest</h1>
+          <p>Solve the Bamboo puzzles by clicking them in the correct order...</p>
+          <p>Talk to your turnip friends in order to find out the sequences...</p>
+        </div>
+    </div>
+    <div class="gameWrapper bambooey" style="left: 0px; top: 0x; position: absolute;">
+    <div>
+        <img class="player" src="playerdownidle.png" style="position: absolute; left: 880px; top: 460px;" />
+
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 1042px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1px; height: 1042px;"></div>
+        <div class="boundary boundarystyle" style="left: 1792px; top: 0px; width: 1px; height: 1042px;"></div>
+
+    <div>
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="Radish" src="radishnpc.gif" alt="Radish" style="position: absolute; left: 650px; top: 250px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="BlueRadish" src="BlueRadish.gif" alt="BlueRadish" style="position: absolute; left: 500px; top: 700px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="RedRadish" src="RedRadish.gif" alt="RedRadish" style="position: absolute; left: 1230px; top: 500px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="yampa" src="farmerNPC.gif" alt="yampa" style="position: absolute; left: 1000px; top: 300px;">
+    </div>
+    
+    <div id="puzzle1" class="puzzle-group">
+        <!-- Sequence buttons (1, 2, 3, 4) -->
+        <div class="sequence-buttons">
+            <button class="sequence-btn boundary musicstyle" data-sequence="1" style="left: 570px; top: 340px; width: 64px; height: 64px;">
+                <img src="bamboo1.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="2" style="left: 320px; top: 60px; width: 64px; height: 96px;">
+                <img src="bamboo2.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="3" style="left: 570px; top: 40px; width: 64px; height: 112px;">
+                <img src="bamboo3.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="4" style="left: 320px; top: 270px;width: 64px; height: 128px;">
+                <img src="bamboo4.png">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item1" style="left: 450px; top: 220px; width: 60px; height: 52px;" alt="BlushFlower" disabled>
+                <img src="frontchest.png">
+            </button>
+        </div>
+    </div>
+
+    <div id="puzzle2" class="puzzle-group">
+        <!-- Sequence buttons (1, 2, 3, 4) -->
+        <div class="sequence-buttons">
+            <button class="sequence-btn boundary musicstyle" data-sequence="1" style="left: 400px; top: 650px; width: 64px; height: 64px;">
+                <img src="bamboo1.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="2" style="left: 330px; top: 580px; width: 64px; height: 96px;">
+                <img src="bamboo2.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="3" style="left: 185px; top: 600px; width: 64px; height: 112px;">
+                <img src="bamboo3.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="4" style="left: 260px; top: 550px;width: 64px; height: 128px;">
+                <img src="bamboo4.png">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item2" style="left: 300px; top: 780px; width: 60px; height: 52px;" alt="Warm Bun" disabled>
+                <img src="frontchest.png">
+            </button>
+        </div>
+    </div>
+
+    <div id="puzzle3" class="puzzle-group">
+        <!-- Sequence buttons (1, 2, 3, 4) -->
+        <div class="sequence-buttons">
+            <button class="sequence-btn boundary musicstyle" data-sequence="1" style="left: 1560px; top: 660px; width: 54px; height: 64px;">
+                <img src="bamboo1.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="2" style="left: 1420px; top: 490px; width: 54px; height: 96px;">
+                <img src="bamboo2.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="3" style="left: 1280px; top: 640px; width: 54px; height: 112px;">
+                <img src="bamboo3.png">
+            </button>
+            <button class="sequence-btn boundary musicstyle" data-sequence="4" style="left: 1420px; top: 720px;width: 64px; height: 128px;">
+                <img src="bamboo4.png">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item3" style="left: 1420px; top: 670px; width: 60px; height: 52px;" alt="Marbles" disabled>
+                <img src="frontchest.png">
+            </button>
+        </div>
+    </div>
+    </div>
+    <div class="fixed-ui">
+        <div><button class="clickMap map"><img src="mapbutton.png"></button></div>
+    
+        <div class="overlay" id="overlay"></div>
+    
+        <div class="popupMap popup" id="popupMap">
+            <h>Locations</h>
+            <ul>
+                <li><a href="sequencepuzzle.html">Bamboo Forest</a></li>
+                <li><a href="passwordpuzzle.html">Undersea Urchin</a></li>
+                <li><a href="lightspuzzle.html">Electric Factory</a></li>
+                <li><a href="index.html">Start</a></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupMap()">Close</button>
+        </div>
+    
+        <div class="fixed-ui ">
+            <div><button class="clickTut tut"><img src="tutbutton.png"></button></div>
+    
+        <div class="popupTut popup" id="popupTut">
+            <h>Help</h>
+            <ul>
+                <li><p>Use arrow keys or WASD to move</p></li>
+                <li><p>Remember who you are: Click to talk to your old friends</p></li>
+                <li><p>Find the items, they are scattered around different areas</p></li>
+                <li><p>Unlock the puzzles: Your friends will have the hints</p></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupTut()">Close</button>
+        </div>
+    
+        <div class="popupItem popup" id="popupItem">
+            <h></h>
+            <ul>
+                <li><img src="" alt="Item image"></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupItem()">Close</button>
+        </div>
+        
+        <div class="fixed-ui ">
+        <div class="inventory" id="inventory">
+            <button id="inventoryButton">bag</button>
+                <div id="inventoryContents"></div>
+            <button id="resetInventoryButton">empty bag</button>
+        </div>
+        </div>
+
+        <div class="dialogue-box" id="dialogue-box">
+            <div class="flex">
+            <div class="portraitGroup" id="npc-portrait-container">
+                <div id="npc-name" class="npc-name"></div>
+                <img id="npc-portrait" class="npc-portrait" src="" alt="NPC Portrait">
+            </div>
+            <div class="dialogueGroup" id="dialogue-text-container">
+                <p id="dialogue-text"></p>
+            </div>
+            </div>
+        </div>    
+
+        <script src="script.js"></script>
+        <script src="scriptClick.js"></script>
+        <script src="scriptNPCBambooforest.js"></script>
+        <script src="puzzle.js"></script>
+
+</body>
+</html>

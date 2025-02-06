@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Hometown</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-content">
+          <h1>Hometown</h1>
+          <p>You wake up with no memory...</p>
+          <p>Talk to the people around to find out who you are...</p>
+        </div>
+    </div>
+
+    <div class="gameWrapper grassy" style="left: 0px; top: 0x; position: absolute;">
+    <div >
+        <img class="player" src="playerdownidle.png" style="position: absolute; left: 700px; top: 200px;" />
+
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 1042px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1px; height: 1042px;"></div>
+        <div class="boundary boundarystyle" style="left: 1792px; top: 0px; width: 1px; height: 1042px;"></div>
+
+        <div class="boundary boundarystyle" style="left: 75px; top:390px; width: 220px; height: 206px;"></div>
+        <div class="boundary boundarystyle" style="left: 1047px; top:690px; width: 220px; height: 206px;"></div>
+        <div class="boundary boundarystyle" style="left: 1495px; top:100px; width: 220px; height: 206px;"></div>
+
+    <div>
+        <button class="clickItem goal boundary" style="left: 70px; top: 650px; width: 32px; height: 32px;" alt="Star Hat">
+        <img src="Star Hatoverworld.png">
+        </button></div>
+    <div>
+        <button class="clickItem goal boundary" style="left: 1320px; top: 870px; width: 32px; height: 32px;" alt="Scarf">
+        <img src="scarfoverworld.png">
+        </button></div>
+    <div>
+        <button class="clickItem goal boundary" style="left: 1520px; top: 300px; width: 32px; height: 32px;" alt="SuperBear Keychain">
+        <img src="keychainoverworld.png">
+        </button></div>
+
+    <div>
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="sheep" src="SheepNPC.gif" alt="sheep" style="position: absolute; left: 280px; top: 540px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="momsheep" src="MomsheepNPC.gif" alt="momsheep" style="position: absolute; left: 1250px; top: 850px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="bluesheep" src="BluesheepNPC.gif" alt="bluesheep" style="position: absolute; left: 1450px; top: 250px;">
+
+        <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+        <img class="npcposition" id="ram" src="ramNPC.gif" alt="ram" style="position: absolute; left: 1000px; top: 150px;">
+    </div>
+
+    <!-- Button wrapping the image -->
+    <button id="linkToPage" class="doorbutton boundarystyle" style="position: absolute; left: 1104px; top: 804px;">
+    <img id="homedoor" src="doorbutton.png" alt="Special Action" />
+    </button>
+
+    </div>
+
+    <div class="fixed-ui">
+    <div><button class="clickMap map"><img src="mapbutton.png"></button></div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popupMap popup" id="popupMap">
+        <h>Locations</h>
+        <ul>
+            <li><a href="sequencepuzzle.html">Bamboo Forest</a></li>
+            <li><a href="passwordpuzzle.html">Undersea Urchin</a></li>
+            <li><a href="lightspuzzle.html">Electric Factory</a></li>
+            <li><a href="index.html">Start</a></li>
+        </ul>
+        <button class="pixelbutton" onclick="closePopupMap()">Close</button>
+    </div>
+
+    <div class="fixed-ui ">
+        <div><button class="clickTut tut"><img src="tutbutton.png"></button></div>
+
+    <div class="popupTut popup" id="popupTut">
+        <h>Help</h>
+        <ul>
+            <li><p>Use arrow keys or WASD to move</p></li>
+            <li><p>Remember who you are: Click to talk to your old friends</p></li>
+            <li><p>Find the items, they are scattered around different areas</p></li>
+            <li><p>Unlock the puzzles: Your friends will have the hints</p></li>
+        </ul>
+        <button class="pixelbutton" onclick="closePopupTut()">Close</button>
+    </div>
+
+    <div class="popupItem popup" id="popupItem">
+        <h></h>
+        <ul>
+            <li><img src="" alt="Item image"></li>
+        </ul>
+        <button class="pixelbutton"onclick="closePopupItem()">Close</button>
+    </div>
+
+    <div class="inventory" id="inventory">
+        <button id="inventoryButton">bag</button>
+            <div id="inventoryContents"></div>
+        <button id="resetInventoryButton">empty bag</button>
+    </div>
+
+    <div class="dialogue-box" id="dialogue-box">
+        <div class="flex">
+        <div class="portraitGroup" id="npc-portrait-container">
+            <div id="npc-name" class="npc-name"></div>
+            <img id="npc-portrait" class="npc-portrait" src="" alt="NPC Portrait">
+        </div>
+        <div class="dialogueGroup" id="dialogue-text-container">
+            <p id="dialogue-text"></p>
+        </div>
+        </div>
+    </div>    
+
+    <script src="script.js"></script>
+    <script src="scriptClick.js"></script>
+    <script src="scriptNPC.js"></script>
+    <script src="locked.js"></script>
+
+</body>
+</html>

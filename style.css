@@ -1,0 +1,449 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+html{
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+body {
+    overflow:hidden;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+.grassy{
+    background-image: url(home.png);
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+}
+.bedroom{
+    background-image: url(bedroom.png);
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+}
+.gameWrapper{
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+    height: 1042px;
+    width: 1792px;
+}
+.bambooey{
+    background-image: url(bambooforest.png);
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+}
+.watery{
+    background-image: url(wateryworld.png);
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+}
+.electricky{
+    background-image: url(electrickymap.png);
+    background-repeat: no-repeat;
+    background-size: 1792px;
+    image-rendering: pixelated;
+}
+.fullscreen{
+    width: 100%; 
+    margin: 0 auto; 
+}
+/* Boundary styles */
+.boundary {	
+    position: absolute;
+    
+}
+.boundarystyle {
+    background-color: rgba(0, 0, 255, 0);
+    border: 2px solid rgba(0, 0, 255, 0);
+}
+
+img.mirror:hover {
+    transform: scale(1.2);
+    transition: all  0.2s ease-in-out;
+}
+/* Map button styles */
+.map {
+    width: 70px;
+    height: 70px;
+    position:fixed;
+    left:88%;
+    top:21%;
+    background-color: rgba(255, 0, 0, 0);
+    border: 2px solid rgb(255, 0, 0,0);
+    z-index: 1001
+}
+/*tutstyle*/
+.tut {
+    width: 70px;
+    height: 70px;
+    position:fixed;
+    left: 93.5%;
+    top:21%;
+    background-color: rgba(179, 0, 255, 0);
+    border: 2px solid rgb(170, 0, 255,0);
+}
+/* Goal button styles */
+.goal {
+    padding: 0px;
+    position: absolute;
+    background-color: rgba(21, 255, 0, 0);
+    border: 2px solid rgb(0, 255, 4,0);
+}
+
+/* Hover effect for clickable items */
+.clickItem:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+/* Hover effect for clickable items */
+.clickMap:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.clickTut:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.doorbutton:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.musicstyle {
+    background-color: rgba(255, 0, 179, 0);
+    border: 2px solid rgb(255, 0, 225,0);
+    padding:0px;
+}
+.musicstyle:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.passwordstyle {
+    padding: 0px;
+    background-color: rgba(255, 157, 0, 0);
+    border: 2px solid rgb(255, 157, 0,0);
+}
+.passwordstyle:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.lightstyle {
+    background-color: rgba(255, 255, 0, 0);
+    border: 2px solid rgb(229, 255, 0,0);
+    padding:0px;
+}
+.lightstyle:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+/* Popup backing */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+/*makes it a list without dots*/
+.popup ul {
+    list-style-type: none;
+    padding: 0;
+}
+/*spaces out locations up down*/
+.popup ul li {
+    margin: 10px 0;
+}
+/*clickable location*/
+.popup ul li a {
+    text-decoration: none;
+    color: #3c00ff;
+    font-size: 18px;
+}
+/* Inventory sidebar */
+.inventory {
+    display: flex;
+    flex-direction: column;
+    gap: 0; 
+    position: fixed;
+    left: 86%; 
+    top: 2%; 
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px;
+    color: white;
+    width: 200px; 
+    z-index: 1201; 
+}
+
+/* Inventory contents (items) */
+#inventoryContents {
+    margin-top: -5px;
+    margin-bottom: -10px;
+    max-height: 200px;
+    min-height: 0px;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Inventory button (to open the inventory) */
+#inventoryButton { 
+    height:64px;
+    width:192px;
+    line-height: 4;  
+    background-color:rgba(255, 0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Pixelify Sans", serif;
+    font-size: 20px;
+    font-weight:300;
+    font-style: normal;
+    background-image: url('bagtop.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Inventory button hover effect */
+#inventoryButton:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Reset inventory button (inside the inventory) */
+#resetInventoryButton {
+    height:52px;
+    width: 192px;
+    background-color:rgba(255, 0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; 
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    background-image: url('bagbottom.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Reset inventory button hover effect */
+#resetInventoryButton:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Inventory item images */
+#inventoryContents img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+/* Overlay for popup */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 800;
+}
+/*npcs*/
+
+.npcposition {
+    position: absolute;
+    height: auto; 
+    width: auto;
+    cursor: pointer;
+}
+
+/* Main dialogue box container */
+.dialogue-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255); 
+    color: rgb(42, 41, 45);
+    border: 2px solid rgb(94, 94, 94);  
+    padding: 10px;
+    display: none;                    
+    cursor: pointer;
+    user-select: none;
+    min-height: fit-content;
+}
+.flex{
+    display: flex;                
+    align-items: flex-start;      
+    gap: 40px;                      
+    justify-content: flex-start;     
+}
+/* Container for NPC name and portrait */
+.portraitGroup {
+    display: flex;                   
+    flex-direction: column;          
+    align-items: center;             
+}
+
+/* NPC portrait styling */
+.npc-portrait {
+    margin-top: 10px;   
+    width: 150px;                    
+    height: 150px;                   
+    border: 2px solid rgb(50, 50, 50);
+}
+
+/* NPC name styling */
+.npc-name {
+    font-weight: bold;               
+    font-size: 30px;                 
+}
+.dialogueGroup {
+    flex: 1;       
+}
+
+#dialogue-text {
+    font-size: 30px;                   
+    line-height: 5;                  
+    text-align: center;
+}
+
+.fixed-ui {
+    position: fixed;
+    z-index: 1200; 
+}
+.password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  input, button {
+    margin: 5px;
+  }
+  
+  #password1-input, #passwordSubmitButton1, #password2-input, #passwordSubmitButton2 {
+    align-self: center;
+  }
+  
+  /* Splash Screen Style */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 1;
+    transition: opacity 3s ease-out;
+    z-index: 2010;
+    pointer-events: auto; /* Initially, splash screen can receive clicks */
+  }
+  
+  .splash-content {
+    text-align: center;
+  }
+  
+  .splash-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .splash-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  /* After the splash screen fades out */
+  .fade-out {
+    opacity: 0;
+    pointer-events: none; /* Disable interaction with the splash screen when it's fading out */
+  }
+  #name-input-overlay {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1011; /* Ensure it is above the fade-to-black */
+}
+
+/* This class handles the fade-to-black effect */
+.fade-to-black {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 1000; 
+    transition: opacity 3s ease-in-out;
+}
+.fade-to-black.show {
+    opacity: 1;
+}
+.end-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+    z-index: 1010; 
+    pointer-events: auto;
+
+}
+.end-screen.show {
+    opacity: 1;  
+}
+.pixelbutton{
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}

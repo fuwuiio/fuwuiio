@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Electric Factory</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-content">
+          <h1>Electric Factory</h1>
+          <p>Solve the light puzzles by clicking them in the correct pattern...</p>
+          <p>Talk to your friends in order to find out the patterns...</p>
+        </div>
+    </div>
+
+    <div class="gameWrapper electricky" style="left: 0px; top: 0x; position: absolute;">
+    <div>
+        <img class="player" src="playerdownidle.png" style="position: absolute; left: 200px; top: 300px;" />
+
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 1042px; width: 1792px; height: 1px;"></div>
+        <div class="boundary boundarystyle" style="left: 0px; top: 0px; width: 1px; height: 1042px;"></div>
+        <div class="boundary boundarystyle" style="left: 1792px; top: 0px; width: 1px; height: 1042px;"></div>
+
+        <div class="boundary boundarystyle" style="left: 60px; top: 0px; width: 10px; height: 1000px;"></div>
+        <div class="boundary boundarystyle" style="left: 105px; top: 440px; width: 40px; height: 500px;"></div>
+        <div class="boundary boundarystyle" style="left: 60px; top: 30px; width: 500px; height: 40px;"></div>
+        <div class="boundary boundarystyle" style="left: 225px; top: 440px; width: 68px; height: 380px;"></div>
+        <div class="boundary boundarystyle" style="left: 100px; top: 895px; width: 200px; height: 60px;"></div>
+        <div class="boundary boundarystyle" style="left: 230px; top: 440px; width: 200px; height: 80px;"></div>
+        <div class="boundary boundarystyle" style="left: 150px; top: 970px; width: 970px; height: 60px;"></div>
+        <div class="boundary boundarystyle" style="left: 890px; top: 895px; width: 230px; height: 60px;"></div>
+        <div class="boundary boundarystyle" style="left: 370px; top: 300px; width: 150px; height: 220px;"></div>
+        <div class="boundary boundarystyle" style="left: 370px; top: 0px; width: 150px; height: 220px;"></div>
+        <div class="boundary boundarystyle" style="left: 745px; top: 0px; width: 150px; height: 220px;"></div>
+        <div class="boundary boundarystyle" style="left: 745px; top: 300px; width: 150px; height: 220px;"></div>
+        <div class="boundary boundarystyle" style="left: 540px; top: 0px; width: 180px; height: 150px;"></div>
+        <div class="boundary boundarystyle" style="left: 540px; top: 370px; width: 180px; height: 150px;"></div>
+        <div class="boundary boundarystyle" style="left: 890px; top: 450px; width: 228px; height: 367px;"></div>
+        <div class="boundary boundarystyle" style="left: 1063px; top: 450px; width: 500px; height: 140px;"></div>
+        <div class="boundary boundarystyle" style="left: 1490px; top: 0px; width: 180px; height: 220px;"></div>
+        <div class="boundary boundarystyle" style="left: 1490px; top: 300px; width: 75px; height: 150px;"></div>
+        <div class="boundary boundarystyle" style="left: 1645px; top: 250px; width: 75px; height: 345px;"></div>
+        <div class="boundary boundarystyle" style="left: 1720px; top: 250px; width: 10px; height: 770px;"></div>
+
+        <div>
+            <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+            <img class="npcposition" id="Robot" src="robotNPC.gif" alt="Robot" style="position: absolute; left: 370px; top: 550px;">
+    
+            <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+            <img class="npcposition" id="PurpleRobot" src="purplerobotNPC.gif" alt="PurpleRobot" style="position: absolute; left: 1160px; top: 640px;">
+    
+            <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+            <img class="npcposition" id="GreenRobot" src="greenrobotNPC.gif" alt="GreenRobot" style="position: absolute; left: 1170px; top: 40px;">
+
+            <div class="boundary boundarystyle npcposition" style="position: absolute;"></div>
+            <img class="npcposition" id="motherboard" src="motherboardNPC.gif" alt="motherboard" style="position: absolute; left: 255px; top: 80px;">
+        </div>
+
+    <div id="puzzle1" class="puzzle-group">
+        <!-- Sequence buttons with images cycling through them -->
+        <div class="sequence-buttons">
+            <button class="cycleButton boundary lightstyle" style="left: 400px; top: 700px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 500px; top: 630px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 650px; top: 630px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 750px; top: 700px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item1" style="left: 575px; top: 760px; width: 60px; height: 52px;" alt="Friendship Bracelet" disabled>
+                <img src="frontchest.png" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+        </div>
+    </div>
+    
+    <!-- Example of another puzzle (puzzle2) with a different answer and item -->
+    <div id="puzzle2" class="puzzle-group">
+        <!-- Sequence buttons with images cycling through them -->
+        <div class="sequence-buttons">
+            <button class="cycleButton boundary lightstyle" style="left: 1330px; top: 100px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1000px; top: 100px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1330px; top: 300px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1000px; top: 300px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item2" style="left: 1170px; top: 200px; width: 60px; height: 52px;" alt="Paintbrush" disabled>
+                <img src="frontchest.png" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+        </div>
+    </div>
+
+       <!-- Example of another puzzle (puzzle3) with a different answer and item -->
+       <div id="puzzle3" class="puzzle-group">
+        <!-- Sequence buttons with images cycling through them -->
+        <div class="sequence-buttons">
+            <button class="cycleButton boundary lightstyle" style="left: 1400px; top: 640px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1240px; top: 800px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1400px; top: 950px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+            <button class="cycleButton boundary lightstyle" style="left: 1560px; top: 800px; width: 52px; height: 48px;">
+                <img src="off light.png" alt="Image" class="cycleImage">
+            </button>
+        </div>
+    
+        <!-- Item button that gets unlocked after correct sequence -->
+        <div>
+            <button class="clickItem goal boundary" id="item3" style="left: 1400px; top: 800px; width: 60px; height: 52px;" alt="Sleeping Mask" disabled>
+                <img src="frontchest.png" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+        </div>
+    </div>
+    </div>
+
+    <div class="fixed-ui">
+        <div><button class="clickMap map"><img src="mapbutton.png"></button></div>
+    
+        <div class="overlay" id="overlay"></div>
+    
+        <div class="popupMap popup" id="popupMap">
+            <h>Locations</h>
+            <ul>
+                <li><a href="sequencepuzzle.html">Bamboo Forest</a></li>
+                <li><a href="passwordpuzzle.html">Undersea Urchin</a></li>
+                <li><a href="lightspuzzle.html">Electric Factory</a></li>
+                <li><a href="index.html">Start</a></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupMap()">Close</button>
+        </div>
+    
+        <div class="fixed-ui ">
+            <div><button class="clickTut tut"><img src="tutbutton.png"></button></div>
+    
+        <div class="popupTut popup" id="popupTut">
+            <h>Help</h>
+            <ul>
+                <li><p>Use arrow keys or WASD to move</p></li>
+                <li><p>Remember who you are: Click to talk to your old friends</p></li>
+                <li><p>Find the items, they are scattered around different areas</p></li>
+                <li><p>Unlock the puzzles: Your friends will have the hints</p></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupTut()">Close</button>
+        </div>
+    
+        <div class="popupItem popup" id="popupItem">
+            <h></h>
+            <ul>
+                <li><img src="" alt="Item image"></li>
+            </ul>
+            <button class="pixelbutton"onclick="closePopupItem()">Close</button>
+        </div>
+    
+        <div class="inventory" id="inventory">
+            <button id="inventoryButton">bag</button>
+                <div id="inventoryContents"></div>
+            <button id="resetInventoryButton">empty bag</button>
+        </div>
+    
+        <div class="dialogue-box" id="dialogue-box">
+            <div class="flex">
+            <div class="portraitGroup" id="npc-portrait-container">
+                <div id="npc-name" class="npc-name"></div>
+                <img id="npc-portrait" class="npc-portrait" src="" alt="NPC Portrait">
+            </div>
+            <div class="dialogueGroup" id="dialogue-text-container">
+                <p id="dialogue-text"></p>
+            </div>
+            </div>
+        </div>    
+    
+        <script src="script.js"></script>
+        <script src="scriptClick.js"></script>
+        <script src="scriptNPCElectricfactory.js"></script>
+        <script src="lights.js"></script>
+
+</body>
+</html>
