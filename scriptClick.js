@@ -147,4 +147,31 @@ document.addEventListener('DOMContentLoaded', () => {
     hideButtonsFromStorage();  // Hide buttons that were previously clicked
 });
 
+// Function to disable the current page link
+function disableCurrentPageLink() {
+    const currentPage = window.location.pathname.split('/').pop();  // Get current page name (e.g. 'index.html')
+    console.log("Current Page:", currentPage);  // Debug: Log the current page
+
+    // Get all the links in the popup
+    const links = document.querySelectorAll('#popupMap a');
+    
+    links.forEach(link => {
+        const linkPage = new URL(link.href).pathname.split('/').pop(); // Get the file name from the link href
+        console.log("Link Href:", link.href);  // Debug: Log each link's href
+        
+        // Disable the link if it matches the current page
+        if (linkPage === currentPage) {
+            link.style.pointerEvents = 'none';  // Disable the link click
+            link.style.color = 'gray';          // Make the link gray
+        } else {
+            link.style.pointerEvents = 'auto';  // Ensure other links are clickable
+            link.style.color = '';              // Reset color to default
+        }
+    });
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    disableCurrentPageLink();
+});
 
